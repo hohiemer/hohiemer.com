@@ -17,6 +17,10 @@
   --text-small: clamp(1rem, 2vw, 1.25rem);
   --text-xs: clamp(.875rem, 1.6vw, 1rem);
 
+  /* scale down post list to avoid CLS */
+  --text-post-list-headline: clamp(1.5rem, 4vw, 3rem);
+  --text-tag: clamp(1rem, 1.6vw, 1.5rem);
+
   --post-list-line-height: clamp(2rem, 5.808vw, 3.63rem);
 
   --tag-copywriting: #F8FD1F;
@@ -171,7 +175,7 @@ h1,
 }
 
 .work .headline {
-  font-size: var(--text-large);
+  font-size: var(--text-post-list-headline);
   font-weight: 600;
   line-height: var(--post-list-line-height);
   word-break: keep-all;
@@ -191,6 +195,7 @@ span[class^="tag-"] {
   white-space: nowrap;
   line-height: var(--post-list-line-height);
   vertical-align: top;
+  font-size: var(--text-tag);
 }
 
 .tag-copywriting {
