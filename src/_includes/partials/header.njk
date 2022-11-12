@@ -1,0 +1,15 @@
+<header>
+  <nav>
+    {% for item in site.navigation %}
+      {% if item.link === page.url and item.text !== "Austin Hohiemer" %}
+        <div class="current"><a href="{{ item.link }}">{{ item.text }}</a></div>
+      {% else %}
+        <div><a href="{{ item.link }}">{{ item.text }}</a></div>
+      {% endif %}
+    {% endfor %}
+  </nav>
+  <div class="mode-switch">
+    <div tabindex="0" class="dark-mode-switch">{% include 'partials/moon.svg' %}</div>
+    <div tabindex="0" class="light-mode-switch">{% include 'partials/sun.svg' %}</div>
+  </div>
+</header>

@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "no-promise-executor-return": "off",
+    "no-unused-expressions": [
+      2,
+      {
+        "allowTernary": true
+      }
+    ]
+  }
+}

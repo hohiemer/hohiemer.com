@@ -1,0 +1,27 @@
+<section class="work">
+  <ul>
+    {% for post in collections.work %}
+      <li>
+        <a href="{{ post.url }}">
+          <div class="headline-container">
+            <span class="headline">{{ post.data.headline }}</span>
+            {% for role in post.data.roles %}
+              <span class="tag-{{ role | slugify }}">{{ role }}</span>
+            {% endfor %}
+          </div>
+          <span class="client">{{ post.data.title }}</span>
+          {%- set cloudinary_source -%}{{ post.data.thumbnail | first | replace("/assets/", "") }}{%- endset -%}
+          {% set image_file %}{{ post.data.thumbnail | first }}{% endset %}
+          <img src="{{ post.data.thumbnail | first }}"
+            srcset="{% srcset cloudinary_source %}"
+            alt="{{ post.data.title }} thumbnail"
+            width="{% width image_file %}"
+            height="{% height image_file %}"
+            loading="lazy"
+            class="hover-image"
+          >
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

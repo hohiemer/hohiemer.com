@@ -1,0 +1,38 @@
+---
+layout: 'layouts/base.njk'
+---
+
+<article class="project">
+  <div class="sidebar">
+    <h1>{{ title }}</h1>
+    <p>{{ content | safe }}</p>
+    <div class="tags">
+      {% for role in roles %}
+        <span class="tag-{{ role | slugify }}">{{ role }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div class="gallery">
+    {% for file in media %}
+      {% if '.mp4' in file %}
+        <video controls>
+          <source src="https://res.cloudinary.com/hohiemer/video/upload/f_webm,q_auto,w_1200/hohiemer.com/{{ file }}" type="video/webm">
+        </video>
+      {% else %}
+        {%- set cloudinary_source -%}{{ file | replace("/assets/", "") }}{%- endset -%}
+        <img src="{{ file }}"
+        srcset="{% srcset cloudinary_source %}"
+        alt="{{ title }}"
+        width="{% width file %}"
+        height="{% height file %}"
+        >
+      {% endif %}
+    {% endfor %}
+  </div>
+</article>
+
+<div class="sticker">
+  {% include "partials/morework.svg" %}
+</div>
+{% include "partials/post-list.njk" %}

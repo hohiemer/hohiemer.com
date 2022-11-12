@@ -1,0 +1,40 @@
+---
+permalink: "feed.xml"
+title: "Austin Hohiemer — Work"
+subtitle: "Recent work from Austin Hohiemer"
+author: "Austin Hohiemer"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ title }}</title>
+  <subtitle>{{ subtitle }}</subtitle>
+  <link href="{{ site.baseURL }}/{{ permalink }}" rel="self"/>
+  <link href="{{ site.baseURL }}"/>
+  <icon>{{ site.baseURL }}/assets/favicon-32x32.png</icon>
+  <updated>{{ collections.work | newest | toRFC }}</updated>
+  <id>{{ site.baseURL }}</id>
+  <author>
+    <name>{{ author }}</name>
+  </author>
+  {%- for post in collections.work %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ site.baseURL }}{{ post.url }}"/>
+    <updated>{{ post.date | toRFC }}</updated>
+    <id>{{ site.baseURL }}{{ post.url }}</id>
+    <author>
+      <name>{{ author }}</name>
+    </author>
+    <content type="html">
+      <img src="{{ site.baseURL }}{{ post.data.media | first }}"/>
+      {{ post.templateContent }}
+      {% for image in post.data.media %}
+        {% if loop.first !== true %}
+          <img src="{{ site.baseURL }}{{ image }}"/>
+        {% endif %}
+      {% endfor %}
+      <p>Role: {% for role in post.data.roles -%}{%- if loop.first === true %}{{ role | capitalize }}{% else %}{{ role | lower }}{% endif %}{% if loop.last !== true %}, {% endif -%}{%- endfor -%}</p>
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>

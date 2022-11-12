@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+ <meta name="generator" content="{{ eleventy.generator }}">
+
+ <title>{{ site.title }}{% if title !== site.title %} - {{ title }} {% endif %}</title>
+
+ <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+ <meta property="og:title" content="{{ site.title }}{% if title !== site.title %} - {{ title }} {% endif %}">
+ <meta property="og:type" content="website">
+ <meta property="og:image" content="{% if meta_image %}{{ site.baseURL }}{{ meta_image }}{% elif thumbnail %}{{ site.baseURL }}{{ thumbnail }}{% else %}{{ site.baseURL }}{{ site.metaImage }}{% endif %}">
+ <meta property="og:url" content="{{ site.baseURL }}{{ page.url }}">
+ <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+ <meta property="og:site_name" content="Austin Hohiemer">
+ <meta property="og:locale" content="en_US">
+ <meta property="article:author" content="Austin Hohiemer">
+ <link rel="canonical" href="{% if canonical %}{{ canonical }}{% else %}{{ site.baseURL }}{{ page.url }}{% endif %}"/>
+ {%- if 'work' in page.url %}
+ <meta name="robots" content="noindex">
+ <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.baseURL }}{{ page.url }}"
+    },
+    "headline": "{{ title }}",
+    "description": "{{ headline }}: work for {{ title }}",
+    "image": "{{ site.baseURL }}{{ thumbnail | first }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.title }}"
+    }
+  }
+</script>
+ {%- else %}
+ <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "{{ site.title }}",
+    "image": "{{ site.baseURL }}{{ site.jsonLDImage }}",
+    "jobTitle": "{{ site.jobTitle }}",
+    "sameAs": [
+        {%- for item in site.jsonLDSameAs %}
+          "{{ item }}"{% if loop.last != true %},{% endif %}
+        {%- endfor %}
+    ]
+  }
+ </script>
+ {%- endif %}
+
+ <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+ <link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+ <link rel="apple-touch-icon" href="/assets/appletouchicon.png">
+ <meta name="theme-color" content="#333333">
+
+ <link rel="alternate" type="application/atom+xml" href="/feed.xml">
+
+ <link rel="preconnect" href="https://res.cloudinary.com">
+ <link rel="preload" as="style" href="https://rsms.me/inter/inter.css">
+ <link rel="stylesheet" href="/css/style.min.css">
+</head>
+<body>
+ {% include 'partials/header.njk' %}
+  <main>
+ {{ content | safe }}
+  </main>
+  <footer>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="24" transform="rotate(180)">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  </footer>
+  <script src="/js/scripts.min.js"></script>
+</body>
+</html>

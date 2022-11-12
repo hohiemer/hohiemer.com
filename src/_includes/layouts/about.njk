@@ -1,0 +1,82 @@
+---
+layout: 'layouts/base.njk'
+---
+
+<section class="intro">
+  <p>{{ intro | safe }}</p>
+</section>
+
+<section class="resume">
+  <div class="info">
+    {% for job in experience %}
+      <h2>{% if job.link%}<a href="{{ job.link }}" target="_blank" rel="noopener noreferrer">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %} {{ job.dates }}</h2>
+      {% for role in job.roles %}
+        <div>{{ role }}</div>
+      {% endfor %}
+      {% for past_role in job.pastRoles %}
+        <div class="past-role">{{ past_role }}</div>
+      {% endfor %}
+    {% endfor %}
+    <h2>{{ etc.title }} {{ etc.dates }}</h2>
+    <div class="etc">
+      {% for role in etc.roles %}
+        {{ role }}<br/>
+      {% endfor %}
+    </div>
+      <div class="links">
+        {% for item, prop in links %}
+          <a href="{{ prop }}" target="_blank" rel="noopener noreferrer">{{ item }}</a>
+        {% endfor %}
+      </div>
+  </div>
+  <div class="image">
+    <img src="/assets/austin.jpg"
+      srcset="{% srcset 'austin.jpg', [300, 600, 900] %}"
+      alt="Austin smiling in front of some trees. With a stick in his hair."
+      width="{% width '/assets/austin.jpg' %}"
+      height="{% height '/assets/austin.jpg' %}"
+      loading="lazy"
+    >
+  </div>
+</section>
+
+<section class="marquee">
+<div>
+  <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#117;&#115;&#116;&#105;&#110;&#43;&#112;&#111;&#114;&#116;&#102;&#111;&#108;&#105;&#111;&#64;&#104;&#111;&#104;&#105;&#101;&#109;&#101;&#114;&#46;&#99;&#111;&#109;">send me an email: &#97;&#117;&#115;&#116;&#105;&#110;&#64;&#104;&#111;&#104;&#105;&#101;&#109;&#101;&#114;&#46;&#99;&#111;&#109;&nbsp;&nbsp;&nbsp;&nbsp;send me an email: &#97;&#117;&#115;&#116;&#105;&#110;&#64;&#104;&#111;&#104;&#105;&#101;&#109;&#101;&#114;&#46;&#99;&#111;&#109;&nbsp;&nbsp;&nbsp;&nbsp;send me an email: &#97;&#117;&#115;&#116;&#105;&#110;&#64;&#104;&#111;&#104;&#105;&#101;&#109;&#101;&#114;&#46;&#99;&#111;&#109;&nbsp;&nbsp;&nbsp;&nbsp;send me an email: &#97;&#117;&#115;&#116;&#105;&#110;&#64;&#104;&#111;&#104;&#105;&#101;&#109;&#101;&#114;&#46;&#99;&#111;&#109;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</div>
+</section>
+
+<section class="other-stuff">
+  <div class="sticker">
+    {% include "partials/otherstuff.svg" %}
+  </div>
+    {% for item, props in otherStuff %}
+      <div class="item">
+        <div class="left">
+          <h2>{{ props.heading }}</h2>
+          <p>{{ props.body }}</p>
+        </div>
+        <div class="right">
+            {% if props.image %}
+              {%- set cloudinary_source -%}{{ props.image | replace("/assets/", "") }}{%- endset -%}
+              <a href="{{ props.link }}" target="_blank" rel="noopener noreferrer">
+              <img src="{{ props.image }}"
+                srcset="{% srcset cloudinary_source, [300, 600, 680, 800, 1000] %}"
+                alt="{{ props.heading }}"
+                width="{% width props.image %}"
+                height="{% height props.image %}"
+                loading="lazy"
+              >
+              </a>
+            {% endif %}
+            {% if props.additionalLinks %}
+              <div class="captains-log-past">
+                <a href="{{ props.additionalLinks['2020'].link }}" target="_blank" rel="noopener noreferrer">{{ props.additionalLinks['2020'].text }}</a>
+                <a href="{{ props.additionalLinks['2021'].link }}" target="_blank" rel="noopener noreferrer">{{ props.additionalLinks['2021'].text }}</a>
+              </div>
+            {% endif %}
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+</section>
