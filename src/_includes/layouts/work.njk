@@ -16,8 +16,9 @@ layout: 'layouts/base.njk'
   <div class="gallery">
     {% for file in media %}
       {% if '.mp4' in file %}
-        <video controls>
+        <video controls width="1200">
           <source src="https://res.cloudinary.com/hohiemer/video/upload/f_webm,q_auto,w_1200/hohiemer.com/{{ file }}" type="video/webm">
+          <source src="https://res.cloudinary.com/hohiemer/video/upload/q_auto,w_1200/hohiemer.com/{{ file }}" type="video/mp4">
         </video>
       {% else %}
         {%- set cloudinary_source -%}{{ file | replace("/assets/", "") }}{%- endset -%}
