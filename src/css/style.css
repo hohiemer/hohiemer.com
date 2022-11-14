@@ -51,7 +51,7 @@ body[data-theme="dark"] {
   color: var(--selection-text-color);
 }
 
-:focus {
+:focus-visible {
   outline: 3px dashed var(--text-color);
 }
 
