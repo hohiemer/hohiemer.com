@@ -1,0 +1,10 @@
+{% extends "src/_includes/layouts/work-base.njk" %}
+
+{% block gallery %}
+  {% for card in cards %}
+    <section class="card">
+    <h2>{{ card.title }}</h2>
+    <p>{{ card.content }}</p>
+    </section>
+  {% endfor %}
+{% endblock %}
