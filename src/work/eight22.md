@@ -4,6 +4,7 @@ layout: 'layouts/work.njk'
 headline: 'People strategy for strategic people'
 roles: 
   - 'Copywriting'
+  - 'Brand voice'
 media: 
   - '/assets/Eight22-Blindspots.jpg'
   - '/assets/Eight22-Cards.jpg'
@@ -12,7 +13,7 @@ media:
   - '/assets/Eight22-social.jpg'
 thumbnail:
   - '/assets/Eight22-Blindspots.jpg'
-displayOrder: 6
+displayOrder: 5
 categories:
   - copywriting
 description:
