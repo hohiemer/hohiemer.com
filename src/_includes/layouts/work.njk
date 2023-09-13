@@ -1,19 +1,6 @@
----
-layout: 'layouts/base.njk'
----
+{% extends "src/_includes/layouts/work-base.njk" %}
 
-<article class="project">
-  <div class="sidebar">
-    <h1>{{ title }}</h1>
-    <p>{{ content | safe }}</p>
-    <div class="tags">
-      {% for role in roles %}
-        <span class="tag-{{ role | slugify }}">{{ role }}</span>
-      {% endfor %}
-    </div>
-  </div>
-  
-  <div class="gallery">
+{% block gallery %}
     {% for file in media %}
       {% if 'autoplay.mp4' in file %}
         <video autoplay muted loop width="1200">
@@ -35,10 +22,4 @@ layout: 'layouts/base.njk'
         >
       {% endif %}
     {% endfor %}
-  </div>
-</article>
-
-<div class="sticker">
-  {% include "partials/morework.svg" %}
-</div>
-{% include "partials/post-list.njk" %}
+{% endblock %}

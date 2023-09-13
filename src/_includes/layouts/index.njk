@@ -1,7 +1,7 @@
----
-layout: 'layouts/base.njk'
----
+{% extends "src/_includes/layouts/base.njk" %}
 
+{% block content %}
 <h1>{{ site.jobTitle }}</h1>
 
 {% include "partials/post-list.njk" %}
+{% endblock %}
