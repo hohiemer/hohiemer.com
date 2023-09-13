@@ -12,7 +12,7 @@ media:
   - '/assets/Presentation_Images.jpg'
 thumbnail:
   - '/assets/Presentation_Table.jpg'
-displayOrder: 8
+displayOrder: 9
 categories:
   - development
 description:

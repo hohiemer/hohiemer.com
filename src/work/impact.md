@@ -11,7 +11,7 @@ media:
   - '/assets/impact-mobile.png'
 thumbnail:
   - '/assets/impact-hero.png'
-displayOrder: 6
+displayOrder: 7
 categories:
   - development
 description:
