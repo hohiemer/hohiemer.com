@@ -1,6 +1,7 @@
 {% extends "src/_includes/layouts/work-base.njk" %}
 
 {% block gallery %}
+  <div class="gallery">
     {% for file in media %}
       {% if 'autoplay.mp4' in file %}
         <video autoplay muted loop width="1200">
@@ -22,4 +23,5 @@
         >
       {% endif %}
     {% endfor %}
+  </div>
 {% endblock %}

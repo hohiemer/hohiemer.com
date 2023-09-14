@@ -460,6 +460,25 @@ footer {
   margin-bottom: 1.875rem;
 }
 
+.gallery.bios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.gallery.bios>* {
+  max-width: 75%;
+  padding: 1rem;
+  border: 6px solid var(--text-color);
+}
+
+.gallery .card h2 {
+  font-size: var(--text-xl);
+}
+
+
+
 @media screen and (max-width: 1000px) {
   :root {
     --main-padding: 0px clamp(10px, 2vw, 20px);
