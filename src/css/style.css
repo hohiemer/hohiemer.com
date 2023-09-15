@@ -168,6 +168,7 @@ h1,
   display: flex;
   align-items: center;
   gap: 1rem;
+  transition: filter 200ms ease;
 }
 
 .work li:last-child {
@@ -477,6 +478,9 @@ footer {
   font-size: var(--text-xl);
 }
 
+.work ul:has(li a:hover) li a:not(:hover) {
+  filter: blur(5px);
+}
 
 
 @media screen and (max-width: 1000px) {
