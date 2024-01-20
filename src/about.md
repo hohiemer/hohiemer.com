@@ -10,7 +10,7 @@
       "link": "https://bullhorncreative.com",
       "dates": "2019 -",
       "roles": [
-        "Copywriter + UX Developer"
+        "Copywriter"
       ],
       "pastRoles": [
         "Copywriter + Digital Associate",
@@ -21,8 +21,8 @@
       "company": "University of Kentucky",
       "dates": "2012 - 2016",
       "roles": [
-        "B.S. Integrated Strategic Communication",
-        "B.B.A. Business Management"
+        "B.S., integrated strategic communication",
+        "B.B.A., business management"
       ]
     }
   ],
@@ -66,7 +66,7 @@
     },
     "captainsLog": {
       "heading": "Captain's Log",
-      "body": "A few years ago, I wrote a Python script to build a playlist from one song I listened to every day. I like to think of it as the world’s lowest-effort journal.",
+      "body": "A few years ago, I wrote a Python script to build a playlist from one song I listened to every day. Think of it as the world’s lowest-effort journal.",
       "image": "/assets/captainslog.jpg",
       "link": "https://open.spotify.com/playlist/1zqINfCXn9C9QpqDK4L8SG?si=c92cae67c8f54350",
       "additionalLinks": {

@@ -1,4 +1,4 @@
-let jobTitle = 'Copywriter and UX developer';
+let jobTitle = 'Copywriting, etc.';
 
 if (process.env.CONTEXT === 'copywriting') {
   jobTitle = 'Copywriter';

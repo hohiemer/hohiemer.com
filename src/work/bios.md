@@ -1,7 +1,7 @@
 ---
 title: "Bullhorn staff bios"
 layout: 'layouts/work-bios.njk'
-headline: 'Mostly* true stories'
+headline: '(Mostly) true stories'
 roles: 
   - 'Copywriting'
 cards:
