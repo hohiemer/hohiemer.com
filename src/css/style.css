@@ -246,7 +246,9 @@ span[class^="tag-"] {
 footer {
   margin: 5rem auto 2rem;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  font-size: var(--text-small);
 }
 
 .intro p {

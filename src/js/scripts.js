@@ -2,6 +2,7 @@ const darkSwitch = document.querySelector('.dark-mode-switch');
 const lightSwitch = document.querySelector('.light-mode-switch');
 const body = document.querySelector('body');
 const initialTheme = localStorage.getItem('theme');
+const footer = document.querySelector('footer');
 
 function darkMode() {
   body.dataset.theme = 'dark';
@@ -70,3 +71,7 @@ async function welcome() {
 }
 
 welcome();
+
+if (footer) {
+  footer.insertAdjacentHTML('beforeend', new Date().getFullYear());
+}
