@@ -2,7 +2,7 @@
 {
   "title": "About",
   "layout": "layouts/about.njk",
-  "intro": "Hi, I’m Austin. I’m a copywriter and front end developer currently working at <a href='https://bullhorncreative.com/' target='_blank' rel='noopener noreferrer'>Bullhorn↗</a> in Lexington, Kentucky. Before I was either of those things, I was a decent touring musician, a mediocre barista, and a pretty bad peach salesman. Turns out I'm allergic to peaches anyway.",
+  "intro": "Hi, I’m Austin. I’m a copywriter and front end developer currently working at <a href='https://bullhorncreative.com/' target='_blank' rel='noopener noreferrer'>Bullhorn↗</a> in Lexington, Kentucky. Before I was either of those things, I was a decent touring musician, a mediocre barista, and a pretty bad peach seller. Turns out I'm allergic to peaches anyway.",
   "image": "/assets/austin.jpg",
   "experience": [
     {
