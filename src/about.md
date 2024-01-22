@@ -13,7 +13,6 @@
         "Copywriter"
       ],
       "pastRoles": [
-        "Copywriter + Digital Associate",
         "Copywriting Intern"
       ]
     },
