@@ -11,7 +11,7 @@ media:
   - 'PrinterSpot.mp4'
 thumbnail:
   - '/assets/Quillo_Paperwork.jpg'
-displayOrder: 5
+displayOrder: 6
 categories:
   - copywriting
 description:

@@ -13,7 +13,7 @@ media:
   - '/assets/Eight22-social.jpg'
 thumbnail:
   - '/assets/Eight22-Blindspots.jpg'
-displayOrder: 6
+displayOrder: 8
 categories:
   - copywriting
 description:

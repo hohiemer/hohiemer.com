@@ -10,7 +10,7 @@ media:
   - '/assets/Tilia_Mobile.jpeg'
 thumbnail:
   - '/assets/Tilia_Thumbnail.jpg'
-displayOrder: 8
+displayOrder: 10
 categories:
   - development
 description:

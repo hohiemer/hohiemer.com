@@ -15,7 +15,7 @@ media:
   - '/assets/naming-fiddletree.png'
 thumbnail:
   - '/assets/naming-fiddletree.png'
-displayOrder: 5
+displayOrder: 7
 categories:
   - copywriting
 description:
