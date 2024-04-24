@@ -21,7 +21,7 @@ cards:
     content: "You're three drinks in at the work holiday party. Tim's telling you a story about something he read this week. You're pretty sure he said it was in the New York Review of Books,  but what he actually said was that he read it while he was in New York, reviewing books. Magazines, technically, in the airport bookstore. Southern Living. You'd been looking for a good pecan pie recipe anyway. And besides, it's nice to be in cultured company."
 thumbnail:
   - '/assets/bios.png'
-displayOrder: 3
+displayOrder: 4
 categories:
   - copywriting
 description:

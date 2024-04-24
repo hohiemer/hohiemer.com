@@ -14,7 +14,7 @@ media:
   - 'stockton-one-monthly-payment.mp4'
 thumbnail:
   - '/assets/stockton-poster.jpg'
-displayOrder: 5
+displayOrder: 2
 categories:
   - copywriting
 description:

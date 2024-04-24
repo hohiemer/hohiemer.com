@@ -14,7 +14,7 @@ media:
   - '/assets/TacoTico_Internal.jpg'
 thumbnail:
   - '/assets/TacoTico_Intro.jpeg'
-displayOrder: 2
+displayOrder: 3
 categories:
   - copywriting
 description:

@@ -9,7 +9,7 @@ media:
   - 'GatesAutoFamily.mp4'
 thumbnail:
   - '/assets/GatesPoster.jpg'
-displayOrder: 4
+displayOrder: 1
 categories:
   - copywriting
 description:

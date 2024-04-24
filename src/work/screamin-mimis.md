@@ -11,7 +11,7 @@ media:
   - '/assets/ScreaminMimis_AllFriends.jpeg'
 thumbnail: 
   - '/assets/ScreaminMimis_Strongwilled.jpg'
-displayOrder: 1
+displayOrder: 6
 categories:
   - copywriting
 description:
