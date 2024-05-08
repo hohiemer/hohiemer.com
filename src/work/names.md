@@ -17,7 +17,7 @@ names:
   - name: '/assets/naming-bluebill.png'
     link: ''
     tag: 'Family recreation products'
-  - name: '/assets/fooji.png'
+  - name: '/assets/Fooji.png'
     link: 'https://fooji.com/'
     tag: 'Fan engagement platform'
   - name: '/assets/naming-confluent.jpeg'
