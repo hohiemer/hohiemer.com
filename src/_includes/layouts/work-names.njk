@@ -4,6 +4,19 @@
   <div class="gallery">
     {% for name in names %}
         {% if 'autoplay.mp4' in name.name %}
+          {% if name.link %}
+            <div>
+              <a href="{{ name.link }}" target="_blank" rel="noopener noreferrer">
+            <video autoplay muted loop width="1200" style="max-width: 100%;">
+              <source src="https://res.cloudinary.com/hohiemer/video/upload/f_webm,q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/webm">
+              <source src="https://res.cloudinary.com/hohiemer/video/upload/q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/mp4">
+            </video>
+            </a>
+            {% if name.tag %}
+              <span>{{ name.tag }}</span>
+            {% endif %}
+          </div>
+          {% else %}
           <div>
             <video autoplay muted loop width="1200" style="max-width: 100%;">
               <source src="https://res.cloudinary.com/hohiemer/video/upload/f_webm,q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/webm">
@@ -13,8 +26,22 @@
               <span>{{ name.tag }}</span>
             {% endif %}
           </div>
+          {% endif %}
         {% elif '.mp4' in name.name %}
-          <div>
+          {% if name.link %}\
+            <div>
+            <a href="{{ name.link }}" target="_blank" rel="noopener noreferrer">
+            <video controls width="1200" style="max-width: 100%;">
+              <source src="https://res.cloudinary.com/hohiemer/video/upload/f_webm,q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/webm">
+              <source src="https://res.cloudinary.com/hohiemer/video/upload/q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/mp4">
+            </video>
+            </a>
+            {% if name.tag %}
+              <span>{{ name.tag }}</span>
+            {% endif %}
+          </div>
+          {% else %}
+            <div>
             <video controls width="1200" style="max-width: 100%;">
               <source src="https://res.cloudinary.com/hohiemer/video/upload/f_webm,q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/webm">
               <source src="https://res.cloudinary.com/hohiemer/video/upload/q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/mp4">
@@ -23,6 +50,7 @@
               <span>{{ name.tag }}</span>
             {% endif %}
           </div>
+          {% endif %}
         {% else %}
           {% if name.link %}
             {%- set cloudinary_source -%}{{ name.name | replace("/assets/", "") }}{%- endset -%}
