@@ -1,0 +1,59 @@
+{% extends "src/_includes/layouts/work-base.njk" %}
+
+{% block gallery %}
+  <div class="gallery">
+    {% for name in names %}
+        {% if 'autoplay.mp4' in name.name %}
+          <div>
+            <video autoplay muted loop width="1200" style="max-width: 100%;">
+              <source src="https://res.cloudinary.com/hohiemer/video/upload/f_webm,q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/webm">
+              <source src="https://res.cloudinary.com/hohiemer/video/upload/q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/mp4">
+            </video>
+            {% if name.tag %}
+              <span>{{ name.tag }}</span>
+            {% endif %}
+          </div>
+        {% elif '.mp4' in name.name %}
+          <div>
+            <video controls width="1200" style="max-width: 100%;">
+              <source src="https://res.cloudinary.com/hohiemer/video/upload/f_webm,q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/webm">
+              <source src="https://res.cloudinary.com/hohiemer/video/upload/q_auto,w_1200/hohiemer.com/{{ name.name }}" type="video/mp4">
+            </video>
+            {% if name.tag %}
+              <span>{{ name.tag }}</span>
+            {% endif %}
+          </div>
+        {% else %}
+          {% if name.link %}
+            {%- set cloudinary_source -%}{{ name.name | replace("/assets/", "") }}{%- endset -%}
+            <div>
+              <a href="{{ name.link }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ name.name }}"
+                srcset="{% srcset cloudinary_source %}"
+                alt="{{ title }}"
+                width="{% width name.name %}"
+                height="{% height name.name %}"
+                >
+              </a>
+              {% if name.tag %}
+                <span>{{ name.tag }}</span>
+              {% endif %}
+              </div>
+          {% else %}
+            {%- set cloudinary_source -%}{{ name.name | replace("/assets/", "") }}{%- endset -%}
+              <div>
+                <img src="{{ name.name }}"
+                  srcset="{% srcset cloudinary_source %}"
+                  alt="{{ title }}"
+                  width="{% width name.name %}"
+                  height="{% height name.name %}"
+                  >
+                  {% if name.tag %}
+                  <span>{{ name.tag }}</span>
+                  {% endif %}
+                </div>
+            {% endif %}
+          {% endif %}
+  {% endfor %}
+  </div>
+{% endblock %}
