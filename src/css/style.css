@@ -447,6 +447,9 @@ footer {
 .sidebar {
   width: 30%;
   margin-bottom: 2.5rem;
+  position: sticky;
+  top: 0;
+  height: min-content;
 }
 
 .sidebar h1 {
