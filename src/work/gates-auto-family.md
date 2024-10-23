@@ -1,7 +1,7 @@
 ---
 title: "Gates Auto Family"
 layout: 'layouts/work.njk'
-headline: "Going somewhere, together"
+headline: "Going somewhere together"
 roles:
   - 'Copywriting'
   - 'Concept'
