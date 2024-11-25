@@ -483,8 +483,9 @@ footer {
   font-size: var(--text-xl);
 }
 
+/* Blur un-hovered work */
 .work ul:has(li a:hover) li a:not(:hover) {
-  filter: blur(5px);
+  filter: blur(2px);
 }
 
 
