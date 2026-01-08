@@ -1,5 +1,5 @@
 ---
-title: "Bullhorn staff bios"
+title: "Team bios"
 layout: 'layouts/work-bios.njk'
 headline: '(Mostly) true stories'
 roles: 

@@ -21,3 +21,5 @@ description:
 ---
 
 Sometimes, the most difficult client is your own team. Not because they're hard to please, but because you're eager to impress. It's a good problem to have. And hey, you can always change it later. 
+
+<a href="https://mediocre.rodeo" rel="noopener noreferrer" target="_blank">Visit site ↗</a>
