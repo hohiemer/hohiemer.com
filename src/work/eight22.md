@@ -5,6 +5,7 @@ headline: 'People strategy for strategic people'
 roles: 
   - 'Copywriting'
   - 'Brand voice'
+  - 'Strategy'
 media: 
   - '/assets/Eight22-Blindspots.jpg'
   - '/assets/Eight22-Cards.jpg'
@@ -13,7 +14,7 @@ media:
   - '/assets/Eight22-social.jpg'
 thumbnail:
   - '/assets/Eight22-Blindspots.jpg'
-displayOrder: 8
+displayOrder: 11
 categories:
   - copywriting
 description:

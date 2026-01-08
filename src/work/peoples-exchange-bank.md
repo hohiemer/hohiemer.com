@@ -5,6 +5,7 @@ headline: "Human-to-human banking"
 roles:
   - 'Copywriting'
   - 'Brand voice'
+  - 'Strategy'
 media: 
   - '/assets/pebank-billboard.png'
   - '/assets/pebank-social.jpeg'
@@ -13,7 +14,7 @@ media:
   - '/assets/pebank-homepage.jpeg'
 thumbnail:
   - '/assets/pebank-homepage.jpeg'
-displayOrder: 5
+displayOrder: 8
 categories:
   - copywriting
 description:

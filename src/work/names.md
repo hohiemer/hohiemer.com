@@ -37,7 +37,7 @@ names:
     tag: ''
 thumbnail:
   - '/assets/naming-fiddletree.png'
-displayOrder: 7
+displayOrder: 9
 categories:
   - copywriting
 description:

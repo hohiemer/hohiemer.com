@@ -5,6 +5,7 @@ headline: "Going somewhere together"
 roles:
   - 'Copywriting'
   - 'Concept'
+  - 'Strategy'
 media: 
   - 'GatesAutoFamily.mp4'
 thumbnail:
@@ -16,4 +17,4 @@ description:
   - 'Gates Auto Family is a group of car dealerships. I helped them connect with people who think like they do.'
 ---
 
-Gates Auto Family is a group of car dealerships. They aren't like the other guys (pushy, sleazy) or the other *other* guys (app, vending machine). We helped them connect with people who think like they do.  
+Gates Auto Family is a group of car dealerships. They aren't like the other guys (pushy, sleazy) or the other *other* guys (apps, vending machines). We helped them connect with people who think like they do.  

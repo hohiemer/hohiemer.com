@@ -14,7 +14,7 @@ media:
   - '/assets/TacoTico_Internal.jpg'
 thumbnail:
   - '/assets/TacoTico_Intro.jpeg'
-displayOrder: 3
+displayOrder: 10
 categories:
   - copywriting
 description:
@@ -22,5 +22,3 @@ description:
 ---
 
 Taco Tico has been slinging Mexican staples since the middle of the last century. But after 60 years and a few management changes, their brand was a lot less fresh than their food. We pulled from the past to let everyone know that the glory days are just getting started. 
-
-Agency: <a href="https://mediocrecreative.com/work/taco-tico/" target="_blank" rel="noopener">Mediocre Creative ↗</a>
