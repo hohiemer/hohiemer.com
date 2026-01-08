@@ -8,7 +8,7 @@ roles:
   - 'Strategy'
 media: 
   - '/assets/Mediocre-Tagline-1.png'
-  - '/assets/Mediocre-ElevatorPitch-1.png'
+  - '/assets/Mediocre-Home-Revised.png'
   - '/assets/Mediocre-Footer-1.png'
   - '/assets/Medicore-Headlines-1.png'
 thumbnail:
