@@ -7,12 +7,12 @@ roles:
   - 'Brand voice'
   - 'Strategy'
 media: 
-  - '/assets/Mediocre-Tagline.png'
-  - '/assets/Mediocre-ElevatorPitch.png'
-  - '/assets/Mediocre-Footer.png'
-  - '/assets/Medicore-Headlines.png'
+  - '/assets/Mediocre-Tagline-1.png'
+  - '/assets/Mediocre-ElevatorPitch-1.png'
+  - '/assets/Mediocre-Footer-1.png'
+  - '/assets/Medicore-Headlines-1.png'
 thumbnail:
-  - '/assets/Mediocre-Tagline.png'
+  - '/assets/Mediocre-Tagline-1.png'
 displayOrder: 6
 categories:
   - copywriting
